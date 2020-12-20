@@ -1,0 +1,64 @@
+#addWordBackground {
+  background-image: url("../../assets/spell_back1.JPG");
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.addWordcontainer {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.addWordBox {
+  width: 50%;
+  height: 20%;
+  background: white;
+  box-shadow: 1px 3px 10px crimson;
+  /* margin: 8rem; */
+  margin: 3rem;
+  margin-left: 8rem;
+  padding: 5rem;
+}
+
+.dropDown {
+  margin-top: 3rem;
+}
+
+#Grade {
+  margin-right: 1rem;
+}
+
+#Grade,
+#Level {
+  padding: 9px;
+  font-size: small;
+}
+
+.addBtn {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid;
+  border-radius: 25px;
+  background: #e63c44;
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-top: 2rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.addBtn:focus {
+  outline: none;
+}
+
+.addBtn:hover {
+  background: rgb(36, 33, 33);
+
+  box-shadow: #d7f74b;
+  color: silver;
+}
