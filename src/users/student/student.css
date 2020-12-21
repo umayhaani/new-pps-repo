@@ -47,18 +47,18 @@
   transition: all 0.2s ease-out;
 }
 
-.body-div {
+.body-div-student {
   box-shadow: 1px 5px crimson;
   border-radius: 20px;
   background: linear-gradient(to bottom right, #f8f52e 0%, #fff 100%);
   /* background-color:#ff4382 ; */
   padding: 50px;
-  margin-top: 0px;
+  margin-top: 130px;
   /* align-content: space-around; */
   margin-left: 60px;
   /* margin-right: 50px; */
   width: 200px;
-  height: 150px;
+  height: 180px;
 }
 .body-div:hover {
   box-shadow: 1px 10px 10px #f8f52e;
@@ -82,7 +82,7 @@
   padding-top: 20px;
 }
 
-.all-divs {
+.all-divs-student {
   display: flex;
   /* display: block; */
   /* background: linear-gradient(to bottom right, #bdb4af , #4e0f4b  ); */
@@ -112,7 +112,7 @@
   background: #e63c44;
   color: white;
   cursor: pointer;
-  margin-right: 1rem;
+  margin-right: 0.1rem;
   text-decoration: none;
   display: inline-block;
 }

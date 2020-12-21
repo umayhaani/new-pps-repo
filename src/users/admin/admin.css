@@ -5,27 +5,22 @@
   font-family: "Montserrat", sans-serif;
 }
 
-.NavbarItems {
-  background: linear-gradient(to bottom right, #fe4880, #ffce00);
+.NavbarItems-admin {
+  background: linear-gradient(to bottom right, #ff4382, #ffce00);
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.2 rem;
 }
-.navbar-logo {
+.navbar-logo-admin {
   color: #fff;
   justify-self: start;
-  margin-left: 20px;
+  margin-left: 15px;
   cursor: pointer;
 }
 
-/* .fa-react{
-    margin-left: 0.5 rem;
-    font-size: 1.6rem;
-} */
-
-.nav-menu {
+.nav-menu-admin {
   font-size: 16px;
   font-weight: bold;
   display: grid;
@@ -38,6 +33,55 @@
   margin-right: 1rem;
 }
 
+.nav-links-admin {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  list-style: none;
+}
+
+.nav-links-admin:hover {
+  background-color: #e63c44;
+  /* border-radius: 1px; */
+  border-radius: 20px;
+  transition: all 0.2s ease-out;
+}
+
+
+/* .NavbarItems {
+  background: linear-gradient(to bottom right, #fe4880, #ffce00);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2 rem;
+}
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 15px;
+  cursor: pointer;
+} */
+
+/* .fa-react{
+    margin-left: 0.5 rem;
+    font-size: 1.6rem;
+} */
+/* .nav-menu {
+  font-size: 16px;
+  font-weight: bold;
+  display: inline;
+  padding-left: 20px; */
+  /* grid-template-columns: repeat(10, auto); */
+  /* grid-gap: 1px; */
+  /* list-style: none; */
+  /* display: flex; */
+  /* text-align: center; */
+  /* width: 30vw; */
+  /* justify-content: end; */
+  /* margin-top: 1rem; */
+/* }
+
 .nav-links {
   color: #fff;
   text-decoration: none;
@@ -46,11 +90,11 @@
 }
 
 .nav-links:hover {
-  background-color: #e63c44;
+  background-color: #e63c44; */
   /* border-radius: 1px; */
-  border-radius: 20px;
-  transition: all 0.2s ease-out;
-}
+  /* border-radius: 20px;
+  transition: all 0.2s ease-out; */
+/* } */
 /* .fa-bars{
     color: #fff;
 } */
@@ -99,10 +143,11 @@
   border-color: #ff4382;
 }
 
-.logo {
+.logo-admin {
   height: 60px;
   border-radius: 30px;
-  margin-left: 5px;
+  margin-left: 20px;
+  cursor: pointer;
   animation: example 5s linear infinite;
 }
 

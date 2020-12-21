@@ -3,6 +3,7 @@ import Admin from "./users/admin/Admin";
 import Student from "./users/student/Student";
 import Teacher from "./users/teacher/Teacher";
 import MainPage from "./spellBee/MainPage";
+import ScoreModal from "./ScoreModal";
 import SpellLevel from "./spellBee/SpellLevel";
 import SpeechToText from "./spellBee/speechTotext/SpeechToText";
 import AddWord from "./users/admin/AddWordAdmin";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/admin" exact>
           <Admin />
         </Route>
+       
         <Route path="/student" exact>
           <Student />
         </Route>
@@ -26,6 +28,10 @@ function App() {
         </Route>
         <Route exact path="/Student/SpellBee">
           <MainPage />
+        </Route>
+
+        <Route exact path="/Student/SpellBee">
+          <ScoreModal />
         </Route>
 
         <Route exact path="/SpellBee/SpellLevel">
@@ -37,6 +43,18 @@ function App() {
         <Route exact path="/addWord">
           <AddWord />
         </Route>
+     
+        <Route exact path="/#">
+          <Admin />
+        </Route>
+
+        <Route exact path="/#">
+          <Teacher />
+        </Route>
+        <Route exact path="/#">
+          <Student />
+        </Route>
+      
 
         <Redirect to="/" />
       </Router>

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import useForm from "../../../src/utils/useForm";
+import { MenuItems } from "./MenuItems-admin";
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/PPS5.jpeg";
 import { TextField } from "@material-ui/core";
 import Modal from "../../modal";
 import ErrorModal from "../../ErrorModal";
@@ -35,7 +38,7 @@ const AddWordAdmin = () => {
       const responseData = await response.json();
       if (responseData.result) {
         console.log(responseData.result.spell);
-
+       
         setErr(() => false);
         setOpen(() => true);
       }
@@ -52,6 +55,40 @@ const AddWordAdmin = () => {
   };
 
   return (
+    <React.Fragment>
+
+    <nav className="NavbarItems-admin">
+            
+    <NavLink to="/admin" >
+                      
+            <img className="logo-admin" src={logo} alt="Logo" />
+    
+    </NavLink>
+            <h1 className="navbar-logo-admin">Admin's Portal</h1>
+    
+            <ul className="nav-menu-admin ">
+              {MenuItems.map((item, index) => {
+                return (
+                  <div className="nav-links-admin" key={index}>
+                    <li>
+                      <NavLink to={item.url} className={item.cName}>
+                        {" "}
+                        {item.title}
+                      </NavLink>
+                      {/* <a className={item.cName} href={item.url}>
+                          {item.title}
+                        </a> */}
+                    </li>
+                  </div>
+                );
+              })}
+            </ul>
+            <NavLink to="/#" > <button className="button-admin">Log out</button>
+            </NavLink> 
+            
+          </nav>
+    
+    
     <div id="addWordBackground">
       <div className="addWordcontainer">
         <div className="addWordBox">
@@ -107,6 +144,7 @@ const AddWordAdmin = () => {
         </div>
       </div>
     </div>
+    </React.Fragment>
   );
 };
 

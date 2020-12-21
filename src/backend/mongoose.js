@@ -1,6 +1,5 @@
 //const express = require("express");
-const { Https } = require("@material-ui/icons");
-const nodemailer = require("nodemailer");
+
 const signupModel = require("./models/signup-models");
 const spellModel = require("./models/spell-model");
 // const spellBeeModel = require("./models/spellBee-model");
@@ -25,32 +24,9 @@ const signup = async (req, res, next) => {
       role,
     });
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "umayhaani981@gmail.com",
-        pass: "ih8Coding",
-      },
-    });
+    const result = await createdUser.save();
 
-    const mailOptions = {
-      from: "umayhaani981@gmail.com",
-      to: "umayhaani981@gmail.com",
-      // to: "umayhaani981@gmail.com",
-      subject: "your family friend",
-
-      html: "<a href=http://localhost:3000/login>Visit W3Schools.com!</a>",
-    };
-    transporter.sendMail(mailOptions, async (error, info) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("email sent " + info.response);
-
-        const result = await createdUser.save();
-        res.status(201).json({ result });
-      }
-    });
+    res.status(201).json({ result });
   }
 };
 
@@ -102,10 +78,10 @@ const spellBeeAdmin = async (req, res, next) => {
   try {
     sp = await spellModel.findOne({ spell: spell });
   } catch (err) {
-    return res.status(500).send("Something went wrong, please try again later");
+    return res.status(500).send("Logging in failed, please try again later");
   }
   if (sp) {
-    return res.status(422).send({ err: "Word Exists Already", status: "422" });
+    return res.status(422).send({ err: "user exists already", status: "422" });
   }
 
   if (!sp) {
@@ -143,16 +119,15 @@ const getWord = async (req, res, next) => {
 
   if (text) {
     // res.json({ text: text.map((t) => t.toObject({ getters: true })) });
-    return res.status(200).send({
-      text: level.map((t) => t.spell),
-      description: level.map((d) => d.description),
-    });
-  }
+    return res.status(200).send(
+        { text: level.map((t) => t.spell),
+        description: level.map((t) => t.description )}
+        );
+  
 };
-
+}
 const matchWord = async (req, res, next) => {
   const { spell } = req.body;
-  console.log("fronrnd " + spell);
   let pls;
   try {
     pls = await spellModel.findOne({ spell: spell });

@@ -23,19 +23,31 @@ const MainPage = (props) => {
   return (
     <>
       <nav className="NavbarItems">
-        <img className="logo" src={logo} alt="Logo" />
+      <NavLink to="/Student" >
+                  
+                  <img className="logo" src={logo} alt="Logo" />
+          
+          </NavLink>
         <h1 className="navbar-logo">Spell Bee</h1>
         <ul className="nav-menu ">
           {/* {MenuItems.map((item, index)=> { */}
           {/* return ( */}
-          <div className="nav-links">
+          {/* <div className="nav-links">
             <li>
-              <NavLink to="/Home" className="nav-links">
+              <NavLink to="/Student/SpellBee" className="nav-links">
+                Home
+              </NavLink>
+            </li>
+          </div> */}
+
+          <div className="nav-links-Level">
+            <li>
+              <NavLink to="/Student" className="nav-links">
                 Home
               </NavLink>
             </li>
           </div>
-          <div className="nav-links">
+          {/* <div className="nav-links">
             <li>
               <NavLink to="Spellings" className="nav-links">
                 Spellings
@@ -48,7 +60,7 @@ const MainPage = (props) => {
                 Vocabulary
               </NavLink>
             </li>
-          </div>
+          </div> */}
         </ul>
       </nav>
 

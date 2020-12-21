@@ -2,6 +2,7 @@ import React from "react";
 import "./student.css";
 import { MenuItems } from "./MenuItems-student";
 import logo from "../../assets/PPS5.jpeg";
+import { USERNAME } from "../../Auth";
 import { NavLink } from "react-router-dom";
 import bow from "../../assets/bow.jpeg";
 
@@ -9,8 +10,12 @@ const Student = () => {
   return (
     <React.Fragment>
       <nav className="NavbarItems-student">
-        <img className="logo-stu" src={logo} alt="Logo" />
-        <h1 className="navbar-logo-student">Student's Portal</h1>
+      <NavLink to="/Student" >
+                  
+                  <img className="logo-stu" src={logo} alt="Logo" />
+          
+          </NavLink>
+        <h1 className="navbar-logo-student">{USERNAME}</h1>
 
         <ul className="nav-menu-student ">
           {MenuItems.map((item, index) => {
@@ -29,42 +34,45 @@ const Student = () => {
             );
           })}
         </ul>
-        <button className="button-student"> Log out</button>
+        <NavLink to="/#" > <button className="button-student">Log out</button>
+        </NavLink> 
+        
       </nav>
 
       <div className="outerDiv_Student">
-        <div className="all-divs">
+        <div className="all-divs-student">
           <NavLink to="/admin">
-            <div className="body-div">
+
+            <div className="body-div-student">
               <p className="text-student">Grade- 1 </p>
-              {/* <div className="button-div">
+              <div className="button-div">
                 <button className="button-student">Go</button>
-              </div> */}
+              </div>
             </div>
           </NavLink>
 
-          <div className="body-div">
+          <div className="body-div-student">
             <p className="text-student">Grade-2 </p>
             <div className="button-div">
               <button className="button-student">Go</button>
             </div>
           </div>
 
-          <div className="body-div">
+          <div className="body-div-student">
             <p className="text-student">Grade-3</p>
             <div className="button-div">
               <button className="button-student">Go</button>
             </div>
           </div>
 
-          <div className="body-div">
+          <div className="body-div-student">
             <p className="text-student">Grade-4</p>
             <div className="button-div">
               <button className="button-student">Go</button>
             </div>
           </div>
 
-          <div className="body-div">
+          <div className="body-div-student">
             <p className="text-student">Grade-5</p>
             <div className="button-div">
               <button className="button-student">Go</button>

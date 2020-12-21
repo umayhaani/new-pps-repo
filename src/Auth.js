@@ -8,6 +8,7 @@ import "./auth.css";
 import { TextField } from "@material-ui/core";
 
 export let userName;
+export let USERNAME;
 
 const Auth = () => {
   const [inputValue, handleChangeForInputs] = useForm();
@@ -18,7 +19,7 @@ const Auth = () => {
   const [errModal, seterrModal] = useState(false);
   const [error, setError] = useState(""); //for backend error
   const history = useHistory();
-
+//username
   useEffect(() => {
     setError(error);
   }, [error]);
@@ -78,13 +79,14 @@ const Auth = () => {
 
         if (responseData.role === "Admin") {
           history.push("/addWord");
-          console.log(responseData.role);
+         // console.log(responseData.role);
         }
         if (responseData.role === "Teacher") {
           userName = responseData.name;
           history.push("/teacher");
         }
         if (responseData.role === "Student") {
+          USERNAME= responseData.name;
           history.push("/student");
         }
       } catch (err) {
@@ -144,6 +146,7 @@ const Auth = () => {
         history.push("/teacher");
       }
       if (responseData.role === "Student") {
+        USERNAME = responseData.name;
         history.push("/student");
       }
     } catch (err) {
@@ -175,24 +178,29 @@ const Auth = () => {
           <TextField
             type="email"
             name="email"
-            label="Enter Email"
+            title="Please enter your email only"
+            label="Enter email"
             value={inputValue.email || ""}
             onChange={handleChangeForInputs}
           />
+            <br></br>  
           <TextField
             type="password"
             name="password"
+            title="Enter atleast 8-digit Password"
             label="Enter Password"
             value={inputValue.password || ""}
             onChange={handleChangeForInputs}
           />
           <br></br>
+          
           {!isLoginMode && (
             <div>
               <TextField
                 type="text"
                 name="name"
                 label="Enter Name"
+                title="Enter your appropriate username"
                 value={inputValue.name || ""}
                 onChange={handleChangeForInputs}
               />
@@ -204,20 +212,24 @@ const Auth = () => {
               </select>
             </div>
           )}
+             <br></br>
+           
           <button
             className="signbutton"
-            // style={{
-            //   marginTop: isLoginMode ? "1rem" : "5px",
-            //   marginLeft: isLoginMode ? "4rem" : "6px",
-            //   marginBottom: isLoginMode && "1px",
-            //   display: "block",
-            // }}
+            style={{
+              marginTop: isLoginMode ? "1rem" : "5px",
+              marginLeft: isLoginMode ? "3.5rem" : "2.5rem",
+              padding:  isLoginMode ? "0.5rem 2rem": "0.5rem 3rem",
+              marginBottom: isLoginMode ? "0px": "0px",
+              display: "block",
+            }}
           >
+        
             {isLoginMode ? "LOGIN" : "SIGNUP"}
           </button>{" "}
         </form>
-
-        {isLoginMode && (
+<div className="googleLogin">
+{isLoginMode && (
           <GoogleLogin
             className="signbutton"
             clientId="1034496854943-dbgivvgf14po4jv278ruhjr0hhebvgt0.apps.googleusercontent.com"
@@ -227,6 +239,8 @@ const Auth = () => {
             cookiePolicy={"single_host_origin"}
           />
         )}
+</div>
+        
 
         {!error ? (
           <ModalWin
@@ -240,19 +254,35 @@ const Auth = () => {
             closeModal={() => seterrModal(false)}
           />
         )}
-        <button onClick={switchModeHandler} className="signbutton" id="move">
+      
+    
+        <button onClick={switchModeHandler} className="signbutton" id="move"
+        style={{
+              marginTop: isLoginMode ? "0.5rem" : "0px",
+              marginBottom: isLoginMode && "1px",
+              marginLeft: isLoginMode ? "3.5rem" : "2.5rem",
+              padding:  isLoginMode ? "0.5rem 1.7rem": "0.5rem 3.5rem",
+              display: "block",
+
+            }}
+        >
           {isLoginMode ? "SIGNUP" : "LOGIN"}
         </button>
       </div>
       <div className="notice">
         <h1>Pakistan Primary School</h1>
-        <div>LEARN ANYTHING</div>
+
+        <div><b>A LEARNING PLATFORM FOR EVERYONE....!</b></div>
         <br></br>
-        <div>LEARN ANYTIME</div>
+        <div><b>LEARN ANYTHING</b></div>
         <br></br>
-        <div>LEARN ANYWHERE</div>
+        <div><b>LEARN ANYTIME</b></div>
         <br></br>
-        <div>FOR FREE</div>
+        <div><b>LEARN ANYWHERE</b></div>
+        <br></br>
+        <div><b>FOR FREE</b></div>
+        <br></br>
+        <div><b> Start where you are. Use what you have. Do what you can.</b></div>
       </div>
     </div>
   );

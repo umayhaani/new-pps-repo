@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import ScoreModal from "../../ScoreModal";
 import { grade } from "../MainPage";
 import { level } from "../SpellLevel";
 import { TextField } from "@material-ui/core";
@@ -9,12 +8,17 @@ import MicIcon from "@material-ui/icons/Mic";
 import MicOffIcon from "@material-ui/icons/MicOff";
 import speaker from "../../assets/speaker.png";
 import useForm from "../../../src/utils/useForm";
+import ScoreModal from "../../ScoreModal";
+
 import { useSpeechSynthesis } from "react-speech-kit";
 import "./speechTotext.css";
-import "../../scoreModal.css";
+import { NavLink, useHistory } from "react-router-dom";
+import logo from "../../assets/PPS5.jpeg";
 
 export let Scores;
 export let attempted;
+
+
 const speechRecognition =
   window.speechRecognition || window.webkitSpeechRecognition;
 const mic = new speechRecognition();
@@ -25,11 +29,14 @@ const SpeechToText = () => {
   const [inputValue, handleChangeForInputs, clear] = useForm();
   const [isListening, setisListening] = useState(false);
   const [check, setCheck] = useState(false);
-  const [visibility, setVisibility] = useState(false);
   const [hintVisibility, sethintVisiility] = useState(false);
-  const [show, setShow] = useState(false);
-  const [word, setWord] = useState("");
+
   const [open, setOpen] = useState(() => false);
+  // const [modalShow, setModalShow] = useState(() => true);
+
+  const [visibility, setVisibility] = useState(false);
+  const [word, setWord] = useState("");
+  // const [score, setScore] = useState(0);
   const [count, setCount] = useState(0);
   const { speak } = useSpeechSynthesis();
 
@@ -37,18 +44,8 @@ const SpeechToText = () => {
   let wordDescription = useRef("");
   let marks = useRef(0);
   let attemptedMarks = useRef(0);
-
   useEffect(() => {
-    setCheck(() => false);
-    setVisibility(() => false);
-  }, []);
-
-  useEffect(() => {
-    setShow(false);
-    console.log(`value of show ${show}`);
-  }, [show]);
-
-  useEffect(() => {
+    
     nextBtnHandler();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count]);
@@ -114,7 +111,7 @@ const SpeechToText = () => {
         if (responseData) {
           console.log(responseData.spell + " im from response of handleListen");
           if (word === responseData.spell) {
-            console.log("both words are equl.....");
+            console.log("both words are equl........");
             marks.current = marks.current + 1;
             Scores = marks.current;
             attemptedMarks.current = count;
@@ -122,27 +119,12 @@ const SpeechToText = () => {
             setCheck(() => true);
             setVisibility(() => true);
           } else {
-            if (word === responseData.err) {
-              setCheck(() => false);
-              setVisibility(() => true);
-            }
-            // marks.current = marks.current;
-            // Scores = marks.current;
-            // attemptedMarks.current = count;
-            // attempted = attemptedMarks.current;
-            // setCheck(() => false);
-            // setVisibility(() => false);
-            // if (
-            //   word !== responseData.spell &&
-            //   responseData.spell !== undefined
-            // ) {
-            //   marks.current = marks.current;
-            //   Scores = marks.current;
-            //   attemptedMarks.current = count;
-            //   attempted = attemptedMarks.current;
-            //   setCheck(() => false);
-            //   setVisibility(() => true);
-            // }
+            marks.current = marks.current;
+            Scores = marks.current;
+            attemptedMarks.current = count;
+            attempted = attemptedMarks.current;
+            setCheck(() => false);
+            setVisibility(() => false);
           }
         }
         if (responseData.err) {
@@ -160,10 +142,8 @@ const SpeechToText = () => {
     }
   };
 
-  //for submit button
   const clickHandler = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch("http://localhost:5000/spell", {
         method: "POST",
@@ -207,7 +187,6 @@ const SpeechToText = () => {
     }
   };
 
-  //speaker
   const speakHandler = async () => {
     clear();
     setWord(() => null);
@@ -232,8 +211,9 @@ const SpeechToText = () => {
   const nextBtnHandler = async () => {
     clear();
     // console.log("from next btn" + count);
-    setVisibility(() => false);
     setWord(() => null);
+    // setCheck(() => false);
+    setVisibility(() => false);
     sethintVisiility(() => false);
     try {
       const response = await fetch(
@@ -249,7 +229,46 @@ const SpeechToText = () => {
   console.log(inputValue.spell);
 
   return (
-    <>
+    <React.Fragment>
+      <nav className="NavbarItems-speech">
+        <NavLink to="/Student">
+          <img className="logo-speech" src={logo} alt="Logo" />
+        </NavLink>
+        <h1 className="navbar-logo-speech">Spell Bee</h1>
+        <ul className="nav-menu-speech ">
+          <div className="nav-links-speech">
+            <li>
+              <NavLink to="/Student" className="nav-links">
+                Home
+              </NavLink>
+            </li>
+          </div>
+
+          <div className="nav-links-speech">
+            <li>
+              <NavLink to="/Student/SpellBee" className="nav-links">
+                Grades
+              </NavLink>
+            </li>
+          </div>
+
+          {/* <div className="nav-links-speech">
+            <li>
+              <NavLink to="/Student" className="nav-links">
+                Go Back To Portal
+              </NavLink>
+            </li>
+          </div> */}
+          {/* <div className="nav-links-Level">
+            <li>
+              <NavLink to="Vocabulary" className="nav-links-Level">
+                Vocabulary
+              </NavLink>
+            </li>
+          </div> */}
+        </ul>
+      </nav>
+
       <ScoreModal
         openModal={open}
         closeModal={() => setOpen(false)}
@@ -271,15 +290,21 @@ const SpeechToText = () => {
               }}
             >
               {check ? (
-                <Check style={{ color: "green" }} />
+                <div>
+                  <Check style={{ color: "green" }} />
+                  {/* <p>{this.setScore({
+                          score: this.state.score + 2
+                          })}
+                          </p> */}
+                </div>
               ) : (
                 <div>
-                  <Clear style={{ color: "red" }} />
-                  <div show>{wordTocompare.current}</div>
+                  <Clear style={{ color: "red", position: "fixed" }} />
+                  <p className="correctWord">{wordTocompare.current}</p>
+                  {/* <p className="correctWord">{description.current}</p>  */}
                 </div>
               )}
             </div>
-
             <form onSubmit={clickHandler}>
               {isListening ? (
                 <TextField
@@ -310,6 +335,17 @@ const SpeechToText = () => {
             >
               {!isListening ? <MicIcon /> : <MicOffIcon />}
             </button>
+
+            <button
+              className="hintBtn"
+              onClick={() => sethintVisiility(() => true)}
+            >
+              Hint
+            </button>
+            {hintVisibility && (
+              <p className="description">{wordDescription.current}</p>
+            )}
+
             <div>
               <button
                 className="nextBtn"
@@ -317,59 +353,24 @@ const SpeechToText = () => {
               >
                 NEXT
               </button>
-              <button
-                style={{ marginLeft: "3rem" }}
-                onClick={() => setOpen(() => true)}
-              >
-                exit
-              </button>
-              <button
-                style={{ marginLeft: "3rem" }}
-                onClick={() => sethintVisiility(() => true)}
-              >
-                hint
-              </button>
+            </div>
 
-              {/* <div>
-              <Modal
-                isOpen={modalisOpen}
-                onRequestClose={() => setModalisOPen(() => false)}
-                style={{
-                  overlay: {
-                    background: "0 0 15 rgba(0,0,0,0.2)",
-                  },
-                  content: {
-                    color: "crimson",
+            <div>
+              <button className="exitBtn" onClick={() => setOpen(() => true)}>
+                Exit
+              </button>
+              {/* {" "} */}
 
-                    marginLeft: "35rem",
-                    marginTop: "8rem",
-                    textAlign: "center",
-                    boxShadow: "0 5px 8px #f5f5f5",
-                    fontWeight: "bolder",
-                  },
-                }}
-              >
-                <div>hello</div>
-                <button
-                  onClick={setModalisOPen(() => false)}
-                  className="closeButton"
-                >
-                  CLOSE
-                </button>
-              </Modal>
-            </div> */}
-              {hintVisibility && (
-                <div>
-                  <p style={{ marginTop: "2rem" }}>{wordDescription.current}</p>
-                  {/* <p>{Scores}</p> */}
-                  <p>{count}</p>
-                </div>
-              )}
+              {/* <ScoreModal
+              modalisOpen={open}
+              // modalShow
+              closeModal={() => setOpen(false)}
+            ></ScoreModal> */}
             </div>
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 };
 

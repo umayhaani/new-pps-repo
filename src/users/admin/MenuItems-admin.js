@@ -1,28 +1,28 @@
 export const MenuItems = [
   {
     title: "Lecture Notes",
-    url: "/addWord",
-    cName: "nav-links",
+    url: "#",
+    cName: "nav-links-admin",
   },
 
   {
     title: "Worksheets",
     url: "#",
-    cName: "nav-links",
+    cName: "nav-links-admin",
   },
   {
     title: "Video Lectures",
     url: "#",
-    cName: "nav-links",
+    cName: "nav-links-admin",
   },
   {
-    title: "Progress Report",
-    url: "#",
-    cName: "nav-links",
+    title: "Spell Bee",
+    url: "/addWord",
+    cName: "nav-links-admin",
   },
   {
     title: "Registered Users",
     url: "#",
-    cName: "nav-links",
+    cName: "nav-links-admin",
   },
 ];

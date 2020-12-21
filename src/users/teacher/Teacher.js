@@ -8,12 +8,15 @@ import "./teacher.css";
 //import {image} from "./images";
 //import { TextField } from "@material-ui/core";
 
-class Teacher extends Component {
-  render() {
+const Teacher = () => {
     return (
       <React.Fragment>
         <nav className="NavbarItems-teacher">
-          <img className="logo" src={logo} alt="Logo" />
+        <NavLink to="/teacher" >
+                  
+                  <img className="logo" src={logo} alt="Logo" />
+          
+          </NavLink>
           <h1 className="navbar-logo-teacher">{userName}</h1>
 
           <ul className="nav-menu-teacher ">
@@ -30,25 +33,26 @@ class Teacher extends Component {
               );
             })}
           </ul>
-          <button className="button-teacher"> Log out</button>
+          <NavLink to="/#" > <button className="button-teacher">Log out</button>
+        </NavLink> 
         </nav>
 
         <div className="all-divs">
-          <div className="body-div">
+          <div className="body-div-teacher">
             <p className="text-teacher">Lecture Notes </p>
             <div className="button-div">
               <button className="button-teacher">Go</button>
             </div>
           </div>
 
-          <div className="body-div">
+          <div className="body-div-teacher">
             <p className="text-teacher">Video Lectures </p>
             <div className="button-div">
               <button className="button-teacher">Go</button>
             </div>
           </div>
 
-          <div className="body-div">
+          <div className="body-div-teacher">
             <p className="text-teacher">Worksheets </p>
             <div className="button-div">
               <button className="button-teacher">Go</button>
@@ -58,5 +62,5 @@ class Teacher extends Component {
       </React.Fragment>
     );
   }
-}
+
 export default Teacher;

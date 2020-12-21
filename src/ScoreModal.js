@@ -3,7 +3,8 @@ import Modal from "react-modal";
 import { Scores } from "./spellBee/speechTotext/SpeechToText";
 import { attempted } from "./spellBee/speechTotext/SpeechToText";
 import { NavLink } from "react-router-dom";
-import img from "../src/assets/star4.jpeg";
+import img from "./assets/stars4.jpg";
+// /src/assets/star4.jpeg";
 import "./scoreModal.css";
 
 Modal.setAppElement("#root");
@@ -40,25 +41,20 @@ const ScoreModal = (props) => {
         }}
       >
         <div>
-          <p className="scoreText">Scores:</p>
+          <p className="scoreText-score">Scores:</p>
         </div>
         <div>
-          <p className="score">{Scores}</p>
+          <p className="score-score">{Scores}</p>
         </div>
         <div>attempted words: {attempted + 1} </div>
 
-        <button
-          onClick={() => setModalisOPen(props.closeModal)}
-          className="closeButton"
-        >
-          Close
-        </button>
-        <NavLink to="/Student/SpellBee">
+        
+        <NavLink to="/Student">
           <button
             onClick={() => setModalisOPen(props.closeModal)}
-            className="closeButton"
+            className="closeButton-score"
           >
-            Retry
+            Close
           </button>
         </NavLink>
       </Modal>

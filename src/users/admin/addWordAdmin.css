@@ -6,7 +6,47 @@
   background-size: cover;
   background-position: center;
 }
+.NavbarItems-admin {
+  background: linear-gradient(to bottom right, #ff4382, #ffce00);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2 rem;
+}
+.navbar-logo-admin {
+  color: #fff;
+  justify-self: start;
+  margin-left: 15px;
+  cursor: pointer;
+}
 
+.nav-menu-admin {
+  font-size: 16px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  /* grid-gap: 1px; */
+  list-style: none;
+  text-align: center;
+  width: 65vw;
+  justify-content: end;
+  margin-right: 1rem;
+}
+
+.nav-links-admin {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  list-style: none;
+}
+
+.nav-links-admin:hover {
+  background-color: #e63c44;
+  /* border-radius: 1px; */
+  border-radius: 20px;
+  transition: all 0.2s ease-out;
+}
 .addWordcontainer {
   text-align: center;
   display: flex;

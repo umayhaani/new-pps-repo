@@ -16,30 +16,44 @@ const SpellLevel = () => {
   return (
     <React.Fragment>
       <nav className="NavbarItems-Level">
-        <img className="logo" src={logo} alt="Logo-Level" />
+      <NavLink to="/Student" >
+                  
+                  <img className="logo" src={logo} alt="Logo" />
+          
+          </NavLink>
         <h1 className="navbar-logo-Level">Spell Bee</h1>
         <ul className="nav-menu-Level ">
+          {/* <div className="nav-links-Level">
+            <li>
+              <NavLink to="/Student/SpellBee" className="nav-links">
+                Home
+              </NavLink>
+            </li>
+          </div> */}
           <div className="nav-links-Level">
             <li>
-              <NavLink to="/Home" className="nav-links">
+              <NavLink to="/Student" className="nav-links">
                 Home
               </NavLink>
             </li>
           </div>
+          
           <div className="nav-links-Level">
             <li>
-              <NavLink to="Spellings" className="nav-links">
-                Spellings
+              <NavLink to="/Student/SpellBee" className="nav-links">
+                Grades
               </NavLink>
             </li>
           </div>
-          <div className="nav-links-Level">
+
+           
+         {/* <div className="nav-links-Level">
             <li>
               <NavLink to="Vocabulary" className="nav-links-Level">
                 Vocabulary
               </NavLink>
             </li>
-          </div>
+          </div> */}
         </ul>
       </nav>
 
@@ -63,12 +77,10 @@ const SpellLevel = () => {
             </button>
             <br></br>
             <button className="button-Level" onClick={navigateTo}>
-              Intermediate
-            </button>
+            Intermediate</button>
             <br></br>
             <button className="button1-Level" onClick={navigateTo}>
-              Advanced
-            </button>
+            Advanced</button>
             <br></br>
           </div>
         </div>
