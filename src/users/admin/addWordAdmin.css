@@ -1,5 +1,8 @@
 #addWordBackground {
-  background-image: url("../../assets/spell_back1.JPG");
+  background-image: url("../../assets/demo.jpeg");
+  /* background-image: url("../../assets/beeee.png"); */
+  /* background-image: url("../../assets/spell_back1.JPG"); */
+  /* background-image: url("../../assets/spell back.png"); */
   position: fixed;
   min-width: 100%;
   min-height: 100%;
@@ -54,13 +57,16 @@
 }
 
 .addWordBox {
-  width: 50%;
+  width: 550px;
   height: 20%;
   background: white;
   box-shadow: 1px 3px 10px crimson;
   /* margin: 8rem; */
-  margin: 3rem;
-  margin-left: 8rem;
+  margin: 2rem;
+  /* float: right; */
+  margin-top: 90px;
+  margin-left: 600px;
+  /* margin-left: 400px; */
   padding: 5rem;
 }
 
