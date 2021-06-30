@@ -8,7 +8,7 @@ import MicIcon from "@material-ui/icons/Mic";
 import MicOffIcon from "@material-ui/icons/MicOff";
 import speaker from "../../assets/speaker.png";
 import useForm from "../../../src/utils/useForm";
-import ScoreModal from "../../ScoreModal";
+import ScoreBeeModal from "./ScoreBeeModal";
 
 import { useSpeechSynthesis } from "react-speech-kit";
 import "./speechTotext.css";
@@ -17,7 +17,6 @@ import logo from "../../assets/PPS5.jpeg";
 
 export let Scores;
 export let attempted;
-
 
 const speechRecognition =
   window.speechRecognition || window.webkitSpeechRecognition;
@@ -45,7 +44,6 @@ const SpeechToText = () => {
   let marks = useRef(0);
   let attemptedMarks = useRef(0);
   useEffect(() => {
-    
     nextBtnHandler();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count]);
@@ -202,7 +200,7 @@ const SpeechToText = () => {
       wordDescription.current = responseData.description[count];
       speak({ text: responseData.text[count] });
 
-      console.log(wordTocompare.current + ".................");
+      console.log(responseData.text[count] + ".................");
     } catch (err) {
       console.log(err);
     }
@@ -251,28 +249,20 @@ const SpeechToText = () => {
               </NavLink>
             </li>
           </div>
-
-          {/* <div className="nav-links-speech">
+          <div className="nav-links-speech">
             <li>
-              <NavLink to="/Student" className="nav-links">
-                Go Back To Portal
+              <NavLink to="/DemoSpellBee" className="nav-links">
+                Demo
               </NavLink>
             </li>
-          </div> */}
-          {/* <div className="nav-links-Level">
-            <li>
-              <NavLink to="Vocabulary" className="nav-links-Level">
-                Vocabulary
-              </NavLink>
-            </li>
-          </div> */}
+          </div>
         </ul>
       </nav>
 
-      <ScoreModal
+      <ScoreBeeModal
         openModal={open}
         closeModal={() => setOpen(false)}
-      ></ScoreModal>
+      ></ScoreBeeModal>
       <div id="background">
         <div className="container">
           <div className="box">
@@ -310,7 +300,7 @@ const SpeechToText = () => {
                 <TextField
                   type="text"
                   name="spell"
-                  label="switching"
+                  label="Enter Spellings"
                   value={word || ""}
                 />
               ) : (

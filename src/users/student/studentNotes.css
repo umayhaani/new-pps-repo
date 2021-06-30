@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .NavbarItems-StudentNotes {
+    background: linear-gradient(to bottom right, #ff4382, #ffce00);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2 rem;
+  }
+  .navbar-logo-StudentNotes {
+    color: #fff;
+    justify-self: start;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  
+  .nav-menu-StudentNotes {
+    font-size: 16px;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    /* grid-gap: 1px; */
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 1rem;
+  }
+  
+  .nav-links-StudentNotes {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    list-style: none;
+  }
+  
+  .nav-links-StudentNotes:hover {
+    background-color: #e63c44;
+    /* border-radius: 1px; */
+    border-radius: 20px;
+    transition: all 0.2s ease-out;
+  } 
+  
+  .button-div {
+    text-align: center;
+    padding-top: 20px;
+  }
+   
+  .button-StudentNotes {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid;
+    border-radius: 20px;
+    background: #e63c44;
+    color: white;
+    cursor: pointer;
+    margin-right: 0.1rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .button-StudentNotes:focus {
+    outline: none;
+  }
+  
+  .button-StudentNotes:hover {
+    background: #d7f74b;
+    border-color: #ff4382;
+  }
+  
+  .button-StudentNotes:active {
+    background: #ffce00;
+    border-color: #ff4382;
+  }
+   
+   
+  .logo    {
+    height: 65px;
+    border-radius: 90rem;
+    animation: example 5s linear infinite;
+  } 
+  .displayNotes{
+      margin-top: 40px;
+  }
+   
+  .outerDiv-StudentNotes { 
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1px;
+  }
+  .logo-StudentNotes {
+    height: 65px;
+    border-radius: 90rem;
+    animation: example 5s linear infinite;
+  }
+  .all-divs-StudentNotes { 
+    position: relative; 
+    margin-top: 5px; 
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .all-divs-StudentNotes .body-div-StudentNotes { 
+    width: 590px;
+  }
+
+  .body-div-StudentNotes {
+    box-shadow: 1px 5px crimson; 
+    border-radius: 20px;   
+      background: linear-gradient(to bottom right,#f2f540, #f36e6e   ); 
+    padding-top: 14px;
+    padding-right:50px;
+    padding-left:30px;
+    margin-top: 90px;
+   /* padding-bottom:60px;  */
+    margin-left: 100px; 
+    width:290px;
+    height:60px;
+    overflow: hidden;
+  }
+  .text-StudentNotes{
+    font-size: 18px;
+    font-weight: bold;
+    color: crimson;
+    margin-left:  0px; 
+    border-radius:20px ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+     padding-left:10px ;
+     padding-right: 10px;
+  }
+  
+  /* .body-div-StudentNotes:hover { 
+    box-shadow: 1px 5px crimson; 
+    background: linear-gradient(to bottom right, #f8f52e 0%, #fff 100%);
+  } */
+  .notes {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    margin-left: 770px;
+    padding-bottom:40px ;
+    font-weight: bolder;
+    font-size: 100px;
+    /* text-decoration: underline  ;  */
+    color: #55433c;
+    display: flex;
+  }
+
+  @keyframes example {
+    0% {
+      transform: perspective(100px) rotateY(0deg);
+    }
+    100% {
+      transform: perspective(100px) rotateY(360deg);
+    }
+  }
+  
+
+
+  .all-divs-StudentNotes2 { 
+    position: relative; 
+    margin-top: 5px; 
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+  
+  .all-divs-StudentNotes2 .body-div-StudentNotes2 { 
+    width: fit-content;
+  }
+
+  .body-div-StudentNotes2 {
+    box-shadow: 1px 5px crimson; 
+    border-radius: 20px; 
+    background: linear-gradient(to bottom right, #f8f52e 0%, #fff 100%);
+      /* background: linear-gradient(to bottom right,#f2f540, #f36e6e   );  */
+    padding-top: 20px;
+    /* padding-bottom: 10px; */
+     /* padding-right:50px; */
+    /* padding-left:30px; */
+    margin-top: 90px;
+   padding-bottom:0px; 
+    margin-left:80px; 
+    width:fit-content; 
+    height:60px;
+    overflow: hidden;
+  }
+  .text-StudentNotes2{
+    font-size: 18px;
+    font-weight: bold;
+    color: crimson;
+    margin-left:  0px; 
+    border-radius:20px ;
+    padding-top: 5px;
+    padding-bottom: 0px;
+      padding-left:10px ;
+     padding-right: 10px;  
+     text-decoration: none;
+  }
+  
+  .body-div-StudentNotes2:hover { 
+    box-shadow: 1px 5px crimson; 
+    /* background: linear-gradient(to bottom right, #f8f52e 0%, #fff 100%); */
+        background: linear-gradient(to bottom right,#f2f540, #f36e6e   ); 
+  }

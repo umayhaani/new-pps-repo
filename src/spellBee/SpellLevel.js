@@ -16,11 +16,9 @@ const SpellLevel = () => {
   return (
     <React.Fragment>
       <nav className="NavbarItems-Level">
-      <NavLink to="/Student" >
-                  
-                  <img className="logo" src={logo} alt="Logo" />
-          
-          </NavLink>
+        <NavLink to="/Student">
+          <img className="logo" src={logo} alt="Logo" />
+        </NavLink>
         <h1 className="navbar-logo-Level">Spell Bee</h1>
         <ul className="nav-menu-Level ">
           {/* <div className="nav-links-Level">
@@ -37,7 +35,7 @@ const SpellLevel = () => {
               </NavLink>
             </li>
           </div>
-          
+
           <div className="nav-links-Level">
             <li>
               <NavLink to="/Student/SpellBee" className="nav-links">
@@ -46,8 +44,7 @@ const SpellLevel = () => {
             </li>
           </div>
 
-           
-         {/* <div className="nav-links-Level">
+          {/* <div className="nav-links-Level">
             <li>
               <NavLink to="Vocabulary" className="nav-links-Level">
                 Vocabulary
@@ -72,15 +69,17 @@ const SpellLevel = () => {
 
           {/* <img className="spell-title" src={spelltitle} alt="Select level" /> */}
           <div>
-            <button className="button1-Level" onClick={navigateTo}>
+            <button className="button2-Level" onClick={navigateTo}>
               Beginner
             </button>
             <br></br>
             <button className="button-Level" onClick={navigateTo}>
-            Intermediate</button>
+              Intermediate
+            </button>
             <br></br>
             <button className="button1-Level" onClick={navigateTo}>
-            Advanced</button>
+              Advanced
+            </button>
             <br></br>
           </div>
         </div>

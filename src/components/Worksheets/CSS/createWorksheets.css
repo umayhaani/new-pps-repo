@@ -1,0 +1,337 @@
+/* .body {
+  background: palevioletred;
+} */
+/* .toolsDiv {
+  width: 15rem;
+  height: 100vh;
+  background: grey;
+  color: white;
+  text-align: center;
+}
+.toolsDiv h1 {
+  box-shadow: 5px 10px 18px #555353;
+}
+
+.toolsDiv li {
+  margin-top: 1rem;
+  width: 15rem;
+  border: 1px solid rgb(24, 22, 22);
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.toolsDiv li:hover {
+  box-shadow: 5px 10px 8px rgb(77, 75, 75);
+  margin-top: 1rem;
+  font-weight: bolder;
+
+  border: 1px rgb(24, 22, 22);
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+} */
+.NavbarItems-WS {
+  background: linear-gradient(to bottom right, #000, #fff);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2 rem;
+}
+.navbar-logo-WS {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nav-menu-WS {
+  font-size: 16px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  /* grid-gap: 1px; */
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: end;
+  margin-right: 1rem;
+}
+
+.nav-links-WS {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  list-style: none;
+}
+
+.nav-links-WS:hover {
+  background-color: rgb(245, 87, 13);
+  border-radius: 1px;
+  transition: all 0.2s ease-out;
+  border-radius: 20px;
+}
+
+.contentDiv {
+  float: right;
+  width: 50rem;
+  height: 30rem;
+  background: white;
+  margin-top: 5rem;
+  margin-right: 15rem;
+}
+.button-WS {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid;
+  border-radius: 20px;
+  background: #000;
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-WS:focus {
+  outline: none;
+}
+
+.button-WS:hover {
+  background: rgb(245, 87, 13);
+  border-color: #ff4382;
+}
+
+.button-WS:active {
+  background: #ffce00;
+  border-color: #ff4382;
+}
+.btnSaveWS {
+  float: right;
+  margin-top: -4rem;
+  margin-right: 15rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid;
+  border-radius: 20px;
+  background: #e63c44;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btnSaveWS:focus {
+  outline: none;
+}
+
+.btnSaveWS:hover {
+  background: #d7f74b;
+  border-color: #ff4382;
+}
+
+.btnSaveWS:active {
+  background: #ffce00;
+  border-color: #ff4382;
+}
+
+.headingDrag:hover {
+  cursor: pointer;
+  border: 1px solid pink;
+}
+.templates {
+  padding-top: 70px;
+  padding-bottom: 20px;
+  padding-left: 540px;
+  font-weight: bolder;
+  font: 4em sans-serif;
+  /* text-decoration: underline  ;  */
+  color: #f85f06;
+}
+.logo-WS {
+  height: 60px;
+  border-radius: 30px;
+  animation: example 5s linear infinite;
+}
+.templateWS {
+  color: rgb(245, 87, 13);
+  font-size: 60px;
+  font-weight: bolder;
+  margin-left: 400px;
+  padding-top: 5px;
+}
+
+.card-container1-WS {
+  margin-top: 35px;
+  margin-left: 50px;
+  width: 270px;
+  height: 360px;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px -5px;
+  transition: 0.3s;
+  animation: ease-in;
+}
+
+.card-container1-WS:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px;
+}
+
+.image-container-WS {
+  overflow: hidden;
+  height: 170px;
+  margin-left: 35px;
+  margin-top: 10px;
+}
+
+.card-content-WS {
+  margin: 1rem;
+  padding: 0.5rem;
+  /* background-color: black;
+   color: #fff; */
+}
+
+h3,
+p {
+  margin: 1;
+  padding: 0;
+}
+.card-title-WS {
+  margin-bottom: 0.25rem;
+  color: #000;
+}
+
+.btn-WS {
+  display: flex;
+  justify-content: center;
+}
+.btn-WS button {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: none;
+  transition: 0.2s;
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+}
+.btn-WS button {
+  background: rgba(27, 156, 252, 0.1);
+  transform: scale(1.1);
+}
+
+a {
+  text-transform: uppercase;
+  color: rgb(245, 87, 13);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* #cl {
+  background: #ff4382;
+  width: 50rem;
+  height: 30rem;
+  background: white;
+  margin-top: 5rem;
+  margin-right: -15rem;
+} */
+
+.card-container1-WS {
+  margin-top: 35px;
+  margin-left: 200px;
+  width: 300px;
+  height: 390px;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px -5px black;
+  transition: 0.3s;
+  animation: ease-in;
+}
+
+.card-container1-WS:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px black;
+}
+.card-container2-WS {
+  margin-top: 35px;
+  margin-left: 110px;
+  width: 300px;
+  height: 390px;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px -5px black;
+  transition: 0.3s;
+  animation: ease-in;
+}
+.card-container2-WS:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px black;
+}
+.image-container-WS {
+  overflow: hidden;
+  height: 170px;
+  margin-left: 35px;
+  margin-top: 10px;
+}
+.image-container2-WS {
+  overflow: hidden;
+  height: 170px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.card-content-WS {
+  margin: 1rem;
+  padding: 0.5rem;
+  /* background-color: black;
+ color: #fff; */
+}
+
+h3,
+p {
+  margin: 1;
+  padding: 0;
+}
+.card-title-WS {
+  margin-bottom: 0.25rem;
+  color: #000;
+  font-size: 19px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.btn-WS {
+  display: flex;
+  justify-content: center;
+  color: rgb(245, 87, 13);
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 0px;
+}
+.btn-WS button {
+  /* padding: 0.25rem; */
+  background-color: #fff;
+  border: none;
+  transition: 0.2s;
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+}
+.btn-WS button {
+  background: rgba(27, 156, 252, 0.1);
+  transform: scale(1.1);
+}
+
+a {
+  text-transform: uppercase;
+  color: rgb(245, 87, 13);
+  text-decoration: none;
+  font-weight: bold;
+}
+.card-body-WS {
+  color: black;
+  font-size: 15px;
+  text-transform: lowercase;
+}
+.all-divs-WS {
+  margin-left: 160px;
+  /* width: 70%; */
+  display: flex;
+  /* display: inline-block; */
+  /* background: linear-gradient(to bottom right, #fff, #f7734b   ); */
+  /* height: 100%; */
+}

@@ -1,0 +1,12 @@
+.outerDivWS {
+  /* background-image: url("./login-image.jpg"); */
+  /* background-image: url("../../assets/WSBack.jpg"); */
+  /* position: fixed; */
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+  /* margin-top: 60px; */
+  /* opacity: 0.6; */
+  /* animation: cubic-bezier(0.075, 0.82, 0.165, 1); */
+}

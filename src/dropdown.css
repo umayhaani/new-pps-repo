@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(56, 165, 238, 0.5);
+}
+
+.container {
+  max-width: 65rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.nav-links {
+  flex: 2;
+}
+
+.nav-links > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link > a {
+  line-height: 1rem;
+  color: #fff;
+  padding: 0 0.8rem;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+
+.nav-link > a > i {
+  margin-left: 0.2rem;
+}
+
+.nav-link:hover > a {
+  transform: scale(1.1);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 10rem;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.dropdown ul {
+  position: relative;
+}
+
+.dropdown-link > a {
+  display: flex;
+  /* background-color: rgb(158, 151, 151); */
+  background-color: rgb(246, 140, 91);
+  /* color: #3498db;*/
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+  /* box-shadow: black; */
+  border-color: black;
+  /* border-radius:12px ; */
+  border-width: 1px 5px;
+  border-style: inset;
+}
+
+.dropdown-link:hover > a {
+  /* background-color:grey; */
+  background-color: white;
+  color: rgb(246, 140, 91);
+  /* color: #fff; */
+}
+
+.dropdown-link:not(:nth-last-child(2)) {
+  border-bottom: 1px solid #efefef;
+}
+
+.dropdown-link i {
+  transform: rotate(-90deg);
+}
+
+.arrow {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+
+  top: -6px;
+  left: 32px;
+  background-color: rgb(104, 99, 99);
+  transform: rotate(45deg);
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.dropdown-link:first-child:hover ~ .arrow {
+  background-color: #3498db;
+}
+
+.dropdown-link {
+  position: relative;
+}
+
+.dropdown .second {
+  top: 0;
+  left: 100%;
+  padding-left: 0.1rem;
+  cursor: pointer;
+  transform: translateX(6px);
+}
+
+.dropdown .second .arrow {
+  top: 10px;
+  left: -1px;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown {
+  transform: translate(0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}

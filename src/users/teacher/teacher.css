@@ -6,7 +6,7 @@
 }
 
 .NavbarItems-teacher {
-  background: linear-gradient(to bottom right, #ff4382, #ffce00);
+  background: linear-gradient(to bottom right, #000, #fff);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@
   cursor: pointer;
 }
 
-.nav-menu-teacher {
+.nav-menu-teachers {
   font-size: 16px;
   font-weight: bold;
   display: grid;
@@ -33,15 +33,15 @@
   margin-right: 1rem;
 }
 
-.nav-links-teacher {
+.nav-links-teachers {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 0.5rem;
   list-style: none;
 }
 
-.nav-links-teacher:hover {
-  background-color: #e63c44;
+.nav-links-teachers:hover {
+  background-color: rgb(245, 87, 13);
   border-radius: 1px;
   transition: all 0.2s ease-out;
   border-radius: 20px;
@@ -52,7 +52,7 @@
   border-radius: 20px;
   background: linear-gradient(to bottom, #ffcc99 0%, #ffff66 100%);
   padding: 50px;
-  margin-top: 150px;
+  margin-top: 100px;
   margin-left: 50px;
   margin-right: 40px;
   width: 330px;
@@ -101,19 +101,19 @@ transition: all 0.2s ease-out;
 }  */
 
 .all-divs {
-  margin: auto;
-  width: 70%;
+  /* margin: auto; */
+  /* width: 70%; */
   display: flex;
   /* display: inline-block; */
   /* background: linear-gradient(to bottom right, #fff, #f7734b   ); */
-  height: 100%;
+  /* height: 100%; */
 }
 .button-teacher {
   font: inherit;
   padding: 0.5rem 1.5rem;
   border: 1px solid;
   border-radius: 20px;
-  background: #e63c44;
+  background: #000;
   color: white;
   cursor: pointer;
   margin-right: 1rem;
@@ -126,7 +126,7 @@ transition: all 0.2s ease-out;
 }
 
 .button-teacher:hover {
-  background: #d7f74b;
+  background: rgb(245, 87, 13);
   border-color: #ff4382;
 }
 
@@ -138,6 +138,127 @@ transition: all 0.2s ease-out;
   height: 60px;
   border-radius: 30px;
   animation: example 5s linear infinite;
+}
+
+.nav2-links {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.nav2-links:hover {
+  background-color: #19152c;
+  /* border-radius: 1px; */
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.2s ease-out;
+}
+.nav2-menu {
+  padding-top: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  grid-template-columns: repeat(6, auto);
+  list-style: none;
+  margin-left: 40px;
+}
+
+.pps {
+  color: rgb(245, 87, 13);
+  font-size: 60px;
+  font-weight: bolder;
+  margin-left: 270px;
+  padding-top: 5px;
+}
+
+.card-container1 {
+  margin-top: 35px;
+  margin-left: 50px;
+  width: 270px;
+  height: 360px;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px -5px black;
+  transition: 0.3s;
+  animation: ease-in;
+}
+
+.card-container1:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px black;
+}
+.card-container2 {
+  margin-top: 15px;
+  margin-left: 50px;
+  width: 290px;
+  height: 390px;
+  overflow: hidden;
+  box-shadow: 0px 0px 30px -5px black;
+  transition: 0.3s;
+  animation: ease-in;
+}
+.card-container2:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px black;
+}
+.image-container {
+  overflow: hidden;
+  height: 170px;
+  margin-left: 35px;
+  margin-top: 10px;
+}
+
+.card-content {
+  margin: 1rem;
+  padding: 0.5rem;
+  /* background-color: black;
+  color: #fff; */
+}
+
+h3,
+p {
+  margin: 1;
+  padding: 0;
+}
+.card-title {
+  margin-bottom: 0.25rem;
+  color: #000;
+  font-size: 19px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  color: rgb(245, 87, 13);
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 0px;
+}
+.btn button {
+  /* padding: 0.25rem; */
+  background-color: #fff;
+  border: none;
+  transition: 0.2s;
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+}
+.btn button {
+  background: rgba(27, 156, 252, 0.1);
+  transform: scale(1.1);
+}
+
+a {
+  text-transform: uppercase;
+  color: rgb(245, 87, 13);
+  text-decoration: none;
+  font-weight: bold;
+}
+.card-body {
+  color: black;
+  font-size: 15px;
+  text-transform: capitalize;
 }
 
 @keyframes example {

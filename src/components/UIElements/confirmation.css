@@ -1,0 +1,46 @@
+.confirmLoginbtn {
+  margin-top: 2rem;
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid;
+  border-radius: 15px;
+  background: grey;
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.confirmLoginbtn:focus {
+  outline: none;
+}
+
+.confirmLoginbtn:hover {
+  background: rgb(61, 59, 59);
+  border-color: black;
+}
+
+.confirmLoginbtn:active {
+  background: rgb(61, 59, 59);
+  border-color: black;
+}
+
+#h2,
+#p {
+  margin-top: 2rem;
+}
+
+.list {
+  box-shadow: 0px 0px 30px -5px rgb(245, 87, 13);
+  transition: 0.3s;
+  /* animation: ease-in; */
+}
+.list:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px 0px black;
+}
+
+/* h2,
+p {
+  margin-top: 2rem;
+} */

@@ -1,0 +1,238 @@
+.NavbarItems-About {
+  /* background: linear-gradient(to bottom right, #000,  #fff  ); */
+  /* margin-top: 20px; ;  */
+  background-color: white;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2 rem;
+}
+.navbar-logo-About {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nav-menu-About {
+  font-size: 16px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  /* grid-gap: 1px; */
+  list-style: none;
+  text-align: center;
+  width: 80vw;
+  justify-content: end;
+  margin-right: 1rem;
+}
+
+.nav-links-About {
+  /* color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    list-style: none; */
+  color: rgb(245, 87, 13);
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  list-style: none;
+}
+
+.nav-links-About:hover {
+  /* background-color:rgb(245, 87, 13);
+    border-radius: 1px;
+    transition: all 0.2s ease-out;
+    border-radius: 20px; */
+  background-color: #e63c44;
+  color: white;
+  /* border-radius: 1px; */
+  border-radius: 20px;
+  transition: all 0.2s ease-out;
+}
+.button-About {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid;
+  border-color: rgb(245, 87, 13);
+  border-radius: 20px;
+  /* background:  #000; */
+  color: black;
+  cursor: pointer;
+  margin-right: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-About:focus {
+  outline: none;
+}
+
+.button-About:hover {
+  background: rgb(245, 87, 13);
+  border-color: #ff4382;
+  color: white;
+}
+
+.button-About:active {
+  background: #ffce00;
+  border-color: #ff4382;
+}
+.logo-About {
+  height: 65px;
+  border-radius: 90rem;
+  animation: example 5s linear infinite;
+}
+.nav2-links-About {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  list-style: none;
+  margin-left: 5px;
+}
+.nav2-links-About:hover {
+  /* background-color: #19152c; */
+  background-color: rgb(245, 87, 13);
+  /* border-radius: 1px; */
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.2s ease-out;
+}
+.nav2-menu-About {
+  padding-top: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  grid-template-columns: repeat(6, auto);
+  list-style: none;
+  margin-left: 40px;
+}
+
+.pps-About {
+  color: rgb(245, 87, 13);
+  font-size: 60px;
+  font-weight: bolder;
+  margin-left: 270px;
+  padding-top: 5px;
+}
+
+.card-container1-About {
+  margin-top: 130px;
+  margin-left: 110px;
+  width: 280px;
+  height: 300px;
+  overflow: hidden;
+  background-color: rgb(241, 228, 235);
+  /* border-color: rgb(251, 82, 4); */
+  /* border-radius: 12px; */
+  /* border : 7px solid   rgb(115, 177, 206); */
+  /* box-shadow: 0px 0px 30px -5px rgb(115, 177, 206); */
+  transition: 0.3s;
+  animation: ease-in;
+}
+
+/* .card-container1-About:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px 0px black;
+  }  */
+.card-container2-About {
+  margin-top: 200px;
+  margin-left: 200px;
+  width: 280px;
+  height: 300px;
+  overflow: hidden;
+  background-color: rgb(241, 228, 235);
+}
+.card-container3-About {
+  margin-top: 260px;
+  margin-left: 120px;
+  width: 280px;
+  height: 340px;
+  overflow: hidden;
+  background-color: rgb(241, 228, 235);
+}
+
+.card-content-About {
+  margin: 1rem;
+  padding: 0.5rem;
+  /* background-color: black;
+   color: #fff; */
+}
+
+.animate {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+.card-title-About {
+  /* margin-bottom:0.25rem; */
+  margin-top: 30px;
+  color: rgb(20, 20, 47);
+  font-size: 19px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.card-body-About {
+  margin-left: 12px;
+  margin-top: 30px;
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.fade-in-image {
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

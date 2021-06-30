@@ -7,6 +7,7 @@ const signupSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String },
   role: { type: String, required: true },
+  isValidated: { type: Boolean, default: false },
 });
 
 //signupSchema.plugin(uniqueValidator);

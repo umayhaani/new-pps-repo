@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import "./modal.css";
 import CheckCircleOutlineRoundedIcon from "@material-ui/icons/CheckCircleOutlineRounded";
+
 Modal.setAppElement("#root");
 
 const ModalWin = (props) => {
   const [modalisOpen, setModalisOPen] = useState(true);
+  const closeHandler = () => {
+    setModalisOPen(props.closeModal);
+  };
 
   return (
     <div>
@@ -40,11 +44,14 @@ const ModalWin = (props) => {
           <h2 style={{ color: "green" }}>SIGN-UP SUCCESSFUL!</h2>
         )}
         {!props.modalShow ? (
-          <p style={{ color: "black" }}>Please switch to LOGIN and continue </p>
+          <p style={{ color: "black" }}>
+            Please check your email for account verification{" "}
+          </p>
         ) : null}
 
         <button
-          onClick={() => setModalisOPen(props.closeModal)}
+          // onClick={() => setModalisOPen(props.closeModal)}
+          onClick={closeHandler}
           className="closeButton"
         >
           CLOSE

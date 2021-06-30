@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+.NavbarItems-PR {
+    background: linear-gradient(to bottom right, #000,  #fff  );
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2 rem;
+  }
+  .navbar-logo-PR {
+    color: #fff;
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  .nav-menu-PR{
+    font-size: 16px;
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    /* grid-gap: 1px; */
+    list-style: none;
+    text-align: center;
+    width: 60vw;
+    justify-content: end;
+    margin-right: 1rem;
+  }
+  
+  .nav-links-PR {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    list-style: none;
+  }
+  
+  .nav-links-PR:hover {
+    background-color:rgb(245, 87, 13);
+    border-radius: 1px;
+    transition: all 0.2s ease-out;
+    border-radius: 20px;
+  }
+
+  
+.button-PR {
+    font: inherit;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid;
+    border-radius: 20px;
+    background:  #000;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .button-PR:focus {
+    outline: none;
+  }
+  
+  .button-PR:hover {
+    background:  rgb(245, 87, 13);
+    border-color: #ff4382;
+  }
+  
+  .button-PR:active {
+    background: #ffce00;
+    border-color: #ff4382;
+  }
+  .logo-PR {
+    height: 60px;
+    border-radius: 30px;
+    animation: example 5s linear infinite;
+  }
+  

@@ -7,7 +7,6 @@
   background-position: center;
 }
 
-
 .NavbarItems-speech {
   background: linear-gradient(to bottom right, #ff4382, #ffce00);
   height: 80px;
@@ -53,19 +52,16 @@
   border-radius: 20px;
   transition: all 0.2s ease-out;
 }
-.logo-speech{
+.logo-speech {
   height: 60px;
   border-radius: 30px;
   animation: example 5s linear infinite;
 }
-.correctWord{
-font-weight: bolder;
-color: red;
-padding-top: 35px;
-margin-left: -16rem;
-
-
-
+.correctWord {
+  font-weight: bolder;
+  color: red;
+  padding-top: 35px;
+  margin-left: -16rem;
 }
 
 .container {
@@ -76,21 +72,23 @@ margin-left: -16rem;
 }
 
 .box {
-  width: 30%;
-  height: 20%;
+  width: 430px;
+  height: 490px;
   background: white;
   box-shadow: 1px 3px 10px crimson;
   /* margin: 8rem; */
-  margin: 3rem;
-  margin-left: 8rem;
+  margin: 4rem;
+  margin-left: 0.5rem;
   padding: 4rem;
   padding-top: 5.5rem;
   padding-left: 6rem;
+  /* padding-right: 6rem; */
 }
 
 .submitBtn {
   font: inherit;
   padding: 0.5rem 1.5rem;
+  font-size: 18px;
   font-weight: bolder;
   border: 1px solid;
   border-radius: 20px;
@@ -99,7 +97,7 @@ margin-left: -16rem;
   color: white;
   cursor: pointer;
   /* margin-right: -2rem; */
-  margin-left: 15px;
+  margin-left: 6px;
   text-decoration: none;
   /* position: relative; */
   display: block;
@@ -119,7 +117,7 @@ margin-left: -16rem;
   color: white;
   cursor: pointer;
   margin-right: -1rem;
-  margin-left:9rem;
+  margin-left: 10rem;
   text-decoration: none;
   display: block;
   margin-top: -4.5rem;
@@ -173,6 +171,7 @@ margin-left: -16rem;
   border-radius: 20px;
   color: white;
   cursor: pointer;
+  font-size: 18px;
   margin-right: -1rem;
   margin-left: -3rem;
   text-decoration: none;
@@ -187,15 +186,13 @@ margin-left: -16rem;
   outline: none;
 }
 
-
-
-
 .hintBtn {
   font: inherit;
   padding: 0.5rem 2rem;
   border: 1px solid;
-  border-radius: 20px ;
+  border-radius: 20px;
   font-weight: bolder;
+  font-size: 17px;
   background: rgb(133, 124, 128);
   color: white;
   cursor: pointer;
@@ -205,8 +202,7 @@ margin-left: -16rem;
   /* font-style:italic; */
   margin-top: 20px;
   margin-bottom: 20px;
- margin-left: 70px;
-
+  margin-left: 70px;
 }
 .hintBtn:focus {
   outline: none;
@@ -216,7 +212,7 @@ margin-left: -16rem;
   background: #fff;
   /* border-color: #5d5a5b; */
   color: rgb(133, 124, 128);
-  box-shadow:1px 3px 10px #5d5a5b;
+  box-shadow: 1px 3px 10px #5d5a5b;
 }
 
 .hintBtn:active {
@@ -224,15 +220,16 @@ margin-left: -16rem;
   /* border-color: #ff4382; */
   color: #fff;
 }
-.description{
-   font-style:italic;
+.description {
+  font-style: italic;
   color: rgb(153, 151, 149);
   /* border-color: lawngreen 10px; */
-    border-style: inset;
+  border-style: inset;
 }
 
 .exitBtn {
   font: inherit;
+  font-size: 20px;
   font-weight: bolder;
   padding: 0.5rem 5.3rem;
   border: 1px solid;

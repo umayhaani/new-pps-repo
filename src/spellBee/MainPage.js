@@ -23,11 +23,9 @@ const MainPage = (props) => {
   return (
     <>
       <nav className="NavbarItems">
-      <NavLink to="/Student" >
-                  
-                  <img className="logo" src={logo} alt="Logo" />
-          
-          </NavLink>
+        <NavLink to="/Student">
+          <img className="logo" src={logo} alt="Logo" />
+        </NavLink>
         <h1 className="navbar-logo">Spell Bee</h1>
         <ul className="nav-menu ">
           {/* {MenuItems.map((item, index)=> { */}
@@ -65,7 +63,7 @@ const MainPage = (props) => {
       </nav>
 
       <div className="outer-div">
-        <div className="white-div">
+        <div className="white-div-spell">
           <div>
             <img className="spell-title" src={title} alt="Spell Bee" />
             <button className="button" onClick={navigateTo} type="button">

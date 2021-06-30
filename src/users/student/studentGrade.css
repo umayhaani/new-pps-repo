@@ -1,0 +1,22 @@
+.gradeDiv {
+  cursor: pointer;
+  border-radius: 6px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: black;
+  border: 4px solid grey;
+  font-size: 17px;
+  font-weight: bolder;
+  transition: 0.1s;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.gradeDiv:hover {
+  color: #e5640f;
+  font-weight: bolder;
+  border: 4px solid #e5640f;
+}

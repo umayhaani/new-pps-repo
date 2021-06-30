@@ -1,0 +1,146 @@
+.outerDiv-Main {
+  background-image: url("./assets/back.jpeg");
+  /* background-image: url("./assets/school-fall-616.jpg"); */
+  /* position: fixed; */
+  /* min-width: 100%; */
+  /* min-height: 100%; */
+  background-size: cover;
+  /* background-position: center; */
+  /* background: linear-gradient(to bottom right, #000,  #fff  ); */
+  /* background-color: grey; */
+  /* opacity: 0.9; */
+  /* animation: cubic-bezier(0.075, 0.82, 0.165, 1); */
+
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.NavbarItems-Main {
+  /* background: linear-gradient(to bottom right, #000,  #fff  ); */
+  /* margin-top: 20px; ;  */
+  background-color: white;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2 rem;
+}
+.navbar-logo-Main {
+  color: #fff;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.nav-menu-Main {
+  font-size: 16px;
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  /* grid-gap: 1px; */
+  list-style: none;
+  text-align: center;
+  width: 80vw;
+  justify-content: end;
+  margin-right: 1rem;
+}
+
+.nav-links-Main {
+  /* color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  list-style: none; */
+  color: rgb(245, 87, 13);
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  list-style: none;
+}
+
+.nav-links-Main:hover {
+  /* background-color:rgb(245, 87, 13);
+  border-radius: 1px;
+  transition: all 0.2s ease-out;
+  border-radius: 20px; */
+  background-color: #e63c44;
+  color: white;
+  /* border-radius: 1px; */
+  border-radius: 20px;
+  transition: all 0.2s ease-out;
+}
+.button-Main {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid;
+  border-color: rgb(245, 87, 13);
+  border-radius: 20px;
+  /* background:  #000; */
+  color: black;
+  cursor: pointer;
+  margin-right: 1rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button-Main:focus {
+  outline: none;
+}
+
+.button-Main:hover {
+  background: rgb(245, 87, 13);
+  border-color: #ff4382;
+  color: white;
+}
+
+.button-Main:active {
+  background: #ffce00;
+  border-color: #ff4382;
+}
+.logo-Main {
+  height: 65px;
+  border-radius: 90rem;
+  animation: example 5s linear infinite;
+}
+.mission {
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  height: 240px;
+  width: 100%;
+  border: 6px solid;
+  border-color: rgb(177, 198, 206);
+  background-color: rgb(212, 219, 219);
+}
+.nav2-links-Main {
+  color: #000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  list-style: none;
+  margin-left: 5px;
+}
+
+.nav2-links-Main:hover {
+  /* background-color: #19152c; */
+  background-color: rgb(245, 87, 13);
+  /* border-radius: 1px; */
+  color: #fff;
+  border-radius: 20px;
+  transition: all 0.2s ease-out;
+}
+.nav2-menu-Main {
+  padding-top: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  grid-template-columns: repeat(6, auto);
+  list-style: none;
+  margin-left: 40px;
+}
+
+.pps-Main {
+  color: rgb(245, 87, 13);
+  font-family: Cursive;
+  font-size: 60px;
+  font-weight: bolder;
+  margin-left: 270px;
+  padding-top: 5px;
+}
